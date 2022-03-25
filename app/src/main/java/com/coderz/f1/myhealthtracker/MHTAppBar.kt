@@ -2,11 +2,13 @@ package com.coderz.f1.myhealthtracker
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun MHTAppBar(){
@@ -17,6 +19,7 @@ fun MHTAppBar(){
         navigationIcon = {
             Icon(
                 painterResource(R.drawable.ic_launcher_foreground),
+                modifier = Modifier.padding(start=16.dp),
                 contentDescription = "",
                 tint =
                     if(isSystemInDarkTheme()) MaterialTheme.colors.onSurface else MaterialTheme.colors.onPrimary
